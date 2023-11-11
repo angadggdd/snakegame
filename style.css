@@ -27,13 +27,33 @@ button {
   cursor: pointer;
 }
 
-.grid {
+.wrapper {
+  width: 55vmin;
+  height: 55vmin;
+  background-color: #293447;
+  border-radius: 5px;
+}
+
+.game-details {
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px 27px;
   display: flex;
-  flex-wrap: wrap;
-  border: 2px solid var(--color-border);
-  min-height: 200px;
-  min-width: 200px;
+  justify-content: space-between;
+}
+.grid{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template:repeat(30,1fr) /repeat(30,1fr) ;
   background-color: white;
+}
+.grid .food{
+  background-color: red;
+}
+.grid .head{
+  background-color: blue;
 }
 
 .start-btn {
@@ -67,15 +87,16 @@ button {
   transform: translate(0);
 }
 
-.grid div {
+/* .grid div {
   transition: transform 0.4s ease;
-}
+} */
 
 .food-item {
   transform: scale(1.15);
 }
 
 .keys-container {
+  margin-top: 70px;
   display: grid;
   grid-template-columns: 50px 50px 50px;
   grid-template-rows: auto;
@@ -144,35 +165,3 @@ button {
 
 
 
-/* new game 2 method */
-.wrapper {
-  width: 65vmin;
-  height: 65vmin;
-  background-color: #293447;
-  border-radius: 5px;
-}
-
-.game-details {
-  color: #f5f5f5;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 20px 27px;
-  display: flex;
-  justify-content: space-between;
-}
-.play-board{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template:repeat(30,1fr) /repeat(30,1fr) ;
-  background-color: #000;
-}
-.play-board .food{
-  background-color: red;
-}
-.play-board .head{
-  background-color: blue;
-}
-
-
-/* new game 2nd method */
